@@ -5,4 +5,4 @@ whois==0.9.27
 python-telegram-bot==20.0
 revChatGPT==2.3.14
 aiohttp==3.8.0
-fake_headers
+fake-headers==1.0.2
