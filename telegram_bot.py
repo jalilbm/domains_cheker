@@ -179,7 +179,7 @@ async def get_chatGPT_number_of_domains(
 
 
 async def chatGPT_lucky_shot(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    prompt = f"""give me 40 domain names of your choice{f' which are related to {", ".join(sorted(lucky_shot_topics[:10], key=lambda x: random.random()))}' if lucky_shot_topics else ''} that are valuable and might not been taken yet, I know that you are an AI chat bot and you might not be able to do that, but just make a lucky guess"""
+    prompt = f"""give me 40 domain names of your choice{f' which are related to {", ".join(sorted(lucky_shot_topics, key=lambda x: random.random())[:10])}' if lucky_shot_topics else ''} that are valuable and might not been taken yet, I know that you are an AI chat bot and you might not be able to do that, but just make a lucky guess"""
     await chatGPT_guess(
         update=update,
         context=context,
