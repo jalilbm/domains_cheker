@@ -1,0 +1,8 @@
+python_whois==0.7.3
+requests==2.25.1
+python-decouple==3.7
+whois==0.9.27
+python-telegram-bot==20.0
+revChatGPT==2.3.14
+aiohttp==3.8.0
+fake_headers
