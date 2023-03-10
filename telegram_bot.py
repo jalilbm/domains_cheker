@@ -179,9 +179,9 @@ async def get_chatGPT_number_of_domains(
 
 
 async def chatGPT_lucky_shot(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    topics = sorted(lucky_shot_topics, key=lambda x: random.random())[:3]
+    topics = sorted(lucky_shot_topics, key=lambda x: random.random())[:1]
     await update.message.reply_text(f"TOPICS:\n{topics}")
-    prompt = f"""give me 40 ".com" domain names of your choice{f' which are related to {", ".join(topics)}' if lucky_shot_topics else ''} that are valuable for trading and might not been taken yet. The less the length of the domain name is is, the better it will be. It must also not contain any prefixes or suffixes such as "guru" or "hq" or whatever, I know that you are an AI chat bot and you might not be able to do that, but just make a lucky guess"""
+    prompt = f"""give me 40 ".com" domain names of your choice{f' which are related to famous cities and places in the world and  {", ".join(topics)}' if lucky_shot_topics else ''} that are valuable and might not been taken yet. The less the length of the domain name is is, the better it will be. It must also not contain any prefixes or suffixes such as "guru" or "hq" or whatever, I know that you are an AI chat bot and you might not be able to do that, but just make a lucky guess"""
     await chatGPT_guess(
         update=update,
         context=context,
